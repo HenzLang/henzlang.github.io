@@ -1,0 +1,42 @@
+body {
+    font-family: 'poppins';
+}
+
+.menu {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: visibility 0s linear 0.3s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: visibility 0s linear 0s, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#caret {
+    animation: blink 1s infinite;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

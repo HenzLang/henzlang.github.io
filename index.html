@@ -4,65 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Mahen</title>
+    <title>Lang Mahen's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-900 text-white">
+    <header class="py-4 px-6 sticky top-0 bg-gray-900 text-white z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Lang Mahen</h1>
+            <nav>
+                <ul class="flex space-x-6 hidden lg:flex">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#about" class="hover:underline">About</a></li>
+                    <li><a href="#work" class="hover:underline">Work</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Burger Menu Button -->
+            <button
+                class="lg:hidden flex justify-center w-8 h-8 bg-gray-900 hover:bg-gray-700 active:bg-gray-900 p-2 rounded"
+                id="burger-menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Menu Dropdown for Mobile -->
+        <div id="mobile-menu" class="menu px-6 lg:hidden">
+            <ul class="space-y-4">
+                <li><a href="#" class="hover:underline block py-2">Home</a></li>
+                <li><a href="#about" class="hover:underline block py-2">About</a></li>
+                <li><a href="#work" class="hover:underline block py-2">Work</a></li>
+                <li><a href="#contact" class="hover:underline block py-2">Contact</a></li>
+            </ul>
+        </div>
+    </header>
 
-    <!-- Bar Navigasi -->
-    <nav class="bg-gray-800 text-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold">Logo</h1>
-                </div>
-                <div class="flex md:hidden">
-                    <button id="menu-toggle" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="hidden md:flex space-x-4">
-                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
-                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                </div>
+
+    <main class="container mx-auto min-h-screen flex justify-center items-center flex-col">
+        <div class="div-container flex flex-col md:flex-row gap-8 max-w-2xl mx-auto text-center">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-4">Hii, I'm</h2>
+                <h1 class="text-5xl font-extrabold mb-5">Lang Mahen</h1>
+                <p class="text-lg mb-4" id="typing-text"><span id="typing-text-span"></span><span id="caret"
+                        class="animate-pulse">|</span></p>
+                <p class="text-sm">Welcome to My personal website.</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center items-center">
+                <img src="./img/boy.jpeg" alt="Boy" class="rounded-full shadow-lg w-2/4 md:w-2/4 lg:w-2/3 xl:w-2/4">
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
-            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
-            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Services</a>
-            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto h-screen pt-16 flex items-center">
+        <div class="div-container flex flex-col md:flex-row gap-16 max-w-2xl mx-auto justify-center items-center">
+            <div class="md:w-full text-center">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">About Me</h2>
+                <p class="text-lg mb-4 text-left mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Hallo, saya memiliki pengalaman dalam menggunakan teknologi seperti HTML, CSS, JavaScript, dan
+                    framework
+                    seperti Laravel. Saya juga memiliki sebagian pengetahuan tentang desain UI/UX dan dapat membuat
+                    aplikasi web yang responsif dan mudah digunakan.
+                </p>
+                <p class="text-lg mb-4 text-left mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Saya senang bekerja sama dengan orang lain dan dapat berkomunikasi dengan baik. Saya juga memiliki
+                    kemampuan untuk belajar dengan cepat dan dapat menyesuaikan diri dengan teknologi baru.
+                </p>
+                <p class="text-lg mb-4 text-left mx-auto" data-aos="fade-up" data-aos-delay="300">
+                    Saya memiliki passion dalam menciptakan aplikasi web yang interaktif dan lumayan menarik. Saya juga
+                    memiliki
+                    kemampuan untuk membuat aplikasi web yang responsif dan mudah digunakan.
+                </p>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Konten Halaman -->
-    <div class="mt-4 p-4 h-screen">
-        <h1 class="text-2xl font-bold">Selamat Datang di Halaman Kami</h1>
-        <p>Scroll ke bawah untuk melihat efek sticky pada bar navigasi.</p>
-    </div>
+    <!-- Work Section -->
+    <section id="work" class="container mx-auto h-screen pt-16 flex items-center">
+        <div class="div-container flex flex-col md:flex-row gap-16 max-w-2xl mx-auto justify-center items-center">
+            <div class="md:w-full text-center">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Work</h2>
+                <p class="text-lg mb-4 text-left mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Saya memiliki tujuan untuk menggapai Full-Stack developer, saya harus semangat dan berjuang untuk
+                    bisa mencapati target tertentu, kalian juga harus bisa mencapai tujuan kalian masing masing dengan
+                    cara semangat tidak overthinking dan sebagainya, semangat!!!
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <!-- <section id="contact" class="container mx-auto h-screen pt-16 flex items-center">
+        <div class="div-container flex flex-col md:flex-row gap-16 max-w-2xl mx-auto justify-center items-center">
+            <div class="md:w-full text-center">
+                <form class="container mx-auto h-screen pt-16 flex items-center">
+                    <div
+                        class="div-container flex flex-col md:flex-row gap-16 max-w-md mx-auto justify-center items-center">
+                        <div class="md:w-full text-center">
+                            <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Contact Me</h2>
+                            <input type="text" id="name" placeholder="Nama"
+                                class="block w-full p-2 mb-4 border-0 bg-gray-700 rounded md:w-3/4 lg:w-5/6 xl:w-full">
+                            <input type="email" id="email" placeholder="Email"
+                                class="block w-full p-2 mb-4 border-0 bg-gray-700 rounded md:w-3/4 lg:w-5/6 xl:w-full">
+                            <textarea id="message" placeholder="Pesan"
+                                class="block w-full p-2 mb-4 border-0 bg-gray-700 rounded md:w-3/4 lg:w-5/6 xl:w-full"></textarea>
+                            <button
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Kirim</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="py-4 px-6 mt-16">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2023 Lang Mahen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./js/typing-text.js"></script>
+
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        AOS.init();
     </script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const burgerMenu = document.getElementById('burger-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            burgerMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('show');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
