@@ -7,21 +7,61 @@
     <title>Portofolio | Mahen</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
 
-    <div class="bg-gray-800 text-white p-4 sticky top-0 z-50">
-        Ini adalah Sticky Bar
+    <!-- Bar Navigasi -->
+    <nav class="bg-gray-800 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold">Logo</h1>
+                </div>
+                <div class="flex md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+            <a href="#" class="block hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Konten Halaman -->
+    <div class="mt-4 p-4 h-screen">
+        <h1 class="text-2xl font-bold">Selamat Datang di Halaman Kami</h1>
+        <p>Scroll ke bawah untuk melihat efek sticky pada bar navigasi.</p>
     </div>
 
-    <div class="mt-4 p-4 h-screen">
-        <h1 class="text-2xl font-bold">Konten Halaman</h1>
-        <p>Scroll ke bawah untuk melihat efek sticky.</p>
-        <div class="h-[2000px] bg-gray-200 mt-4">
-            <!-- Konten tambahan -->
-        </div>
-    </div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 
